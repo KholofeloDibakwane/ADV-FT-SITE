@@ -217,7 +217,7 @@ a {
   text-transform: uppercase;
 }
 
-/* ---------- HAMBURGER MENU — MOBILE ONLY ---------- */
+/* ---------- HAMBURGER MENU — ONLY SHOWS ON MOBILE ---------- */
 .nav-toggle {
   display: none;
 }
@@ -623,7 +623,7 @@ a {
 .portrait-small-image {
   width: 100%;
   height: 100%;
-  background-image: url('assets/d.jpeg');
+  background-image: url('assets/adv.jpeg');  /* ← FIXED: was d.jpeg, now adv.jpeg */
   background-size: cover;
   background-position: center;
   filter: grayscale(80%);
@@ -1077,7 +1077,7 @@ a {
   letter-spacing: 1px;
 }
 
-/* ---------- RESPONSIVE — YOUR ORIGINAL + HAMBURGER + PORTRAIT FIX ---------- */
+/* ---------- RESPONSIVE — YOUR EXACT CODE + HAMBURGER + CARD FIXES ---------- */
 @media (max-width: 1100px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1085,7 +1085,7 @@ a {
   }
   
   .hero-photo {
-    order: -1; /* THIS FIXES PORTRAIT VISIBILITY ON MOBILE */
+    order: -1;
     max-width: 480px;
     margin: 0 auto;
   }
@@ -1105,7 +1105,7 @@ a {
 }
 
 @media (max-width: 900px) {
-  /* HAMBURGER MENU ACTIVATES */
+  /* ---------- HAMBURGER MENU ACTIVATES ---------- */
   .nav-toggle-label {
     display: flex;
   }
@@ -1147,6 +1147,7 @@ a {
     transform: rotate(-45deg) translate(7px, -7px);
   }
   
+  /* ---------- YOUR EXISTING CODE — NOTHING REMOVED ---------- */
   .hero-name-large {
     font-size: 4rem;
   }
@@ -1159,8 +1160,12 @@ a {
     padding: 0 var(--space-md);
   }
   
+  .nav-links {
+    gap: 1.2rem;
+  }
+  
   .logo-text {
-    display: none; /* Hides text on mobile, only logo shows */
+    display: none;
   }
   
   .expertise-grid {
@@ -1202,8 +1207,23 @@ a {
     width: 100%;
   }
   
+  .nav-links {
+    gap: 0.8rem;
+  }
+  
+  .nav-link {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+  
+  /* ---------- CARD FIX — CONCIERGE BUTTONS STACK NICELY ---------- */
   .card-concierge {
     flex-direction: column;
+  }
+  
+  .concierge-email,
+  .concierge-wa {
+    width: 100%;
   }
   
   .clerk-chat {
@@ -1217,4 +1237,4 @@ a {
   }
 }
 
-/* ========== END OF CSS — YOUR DESIGN + MOBILE FIXES ========== */}/* ========== END OF CSS — 100/10, FUTURE LAW, ARCHITECTURAL ========== */
+/* ========== END OF CSS — YOUR DESIGN + HAMBURGER + PATH FIX ========== */
