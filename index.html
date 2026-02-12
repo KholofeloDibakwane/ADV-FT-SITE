@@ -29,12 +29,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
   
-  <!-- EXTERNAL CSS — MOBILE-FIRST, ARCHITECTURAL -->
+  <!-- EXTERNAL CSS — YOUR DESIGN + MOBILE FIXES -->
   <link rel="stylesheet" href="law-styles.css">
 </head>
 <body>
 
-  <!-- ===== MOBILE-FIRST NAVBAR WITH HAMBURGER ===== -->
+  <!-- ===== NAVBAR — DESKTOP: ROW, MOBILE: HAMBURGER ===== -->
   <header class="nav">
     <div class="nav-container">
       <div class="logo-area">
@@ -46,7 +46,7 @@
         </div>
       </div>
       
-      <!-- HAMBURGER MENU TOGGLE -->
+      <!-- HAMBURGER TOGGLE (VISIBLE ONLY ON MOBILE) -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label">
         <span></span>
@@ -54,6 +54,7 @@
         <span></span>
       </label>
       
+      <!-- NAV LINKS -->
       <nav class="nav-links">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#expertise" class="nav-link">Expertise</a>
@@ -63,10 +64,10 @@
     </div>
   </header>
 
-  <!-- ===== HERO — PORTRAIT FIRST ON MOBILE, FULL CONTENT ===== -->
+  <!-- ===== HERO — PORTRAIT VISIBLE ON MOBILE (ORDER: -1) ===== -->
   <section id="home" class="hero">
     <div class="hero-grid">
-      <!-- PHOTO - FIRST ON MOBILE (order: 1) -->
+      <!-- PHOTO - appears FIRST on mobile -->
       <div class="hero-photo">
         <div class="photo-frame">
           <!-- PORTRAIT - assets/d.jpeg -->
@@ -75,7 +76,7 @@
         </div>
       </div>
       
-      <!-- CONTENT - SECOND ON MOBILE (order: 2) -->
+      <!-- CONTENT - appears SECOND on mobile -->
       <div class="hero-content">
         <div class="hero-suptitle">Advocate of the High Court · LPC 104058</div>
         <h1 class="hero-title">
@@ -94,7 +95,7 @@
           <a href="https://wa.me/27728642390?text=Advocate%20Maleka%20-%20Consultation%20request%20via%20website" class="btn btn-secondary">📱 WhatsApp direct</a>
         </div>
         
-        <!-- FULL CREDENTIAL STAMP -->
+        <!-- CREDENTIAL STAMP -->
         <div class="hero-credentials">
           <span class="credential-item">LPC 104058</span>
           <span class="credential-divider"></span>
@@ -108,7 +109,7 @@
     </div>
   </section>
 
-  <!-- ===== EXPERTISE — 7 PILLARS, FULL DETAIL, EACH WITH CONCIERGE CONTACT ===== -->
+  <!-- ===== EXPERTISE — 7 PILLARS, FULL DETAIL ===== -->
   <section id="expertise" class="expertise">
     <div class="container">
       <div class="section-header">
@@ -119,7 +120,7 @@
       
       <div class="expertise-grid">
         
-        <!-- 1. CIVIL & COMMERCIAL LITIGATION — FULL DETAIL -->
+        <!-- 1. CIVIL & COMMERCIAL LITIGATION -->
         <article class="expertise-card">
           <div class="card-brass"></div>
           <h3 class="card-title">Civil & Commercial Litigation</h3>
@@ -137,7 +138,7 @@
           </div>
         </article>
         
-        <!-- 2. CRIMINAL LAW — FULL DETAIL -->
+        <!-- 2. CRIMINAL LAW -->
         <article class="expertise-card">
           <div class="card-brass"></div>
           <h3 class="card-title">Criminal Law</h3>
@@ -153,7 +154,7 @@
           </div>
         </article>
         
-        <!-- 3. LABOUR & EMPLOYMENT LAW — FULL DETAIL -->
+        <!-- 3. LABOUR & EMPLOYMENT LAW -->
         <article class="expertise-card">
           <div class="card-brass"></div>
           <h3 class="card-title">Labour & Employment Law</h3>
@@ -169,7 +170,7 @@
           </div>
         </article>
         
-        <!-- 4. DIVORCE & FAMILY LAW — FULL DETAIL -->
+        <!-- 4. DIVORCE & FAMILY LAW -->
         <article class="expertise-card">
           <div class="card-brass"></div>
           <h3 class="card-title">Divorce & Family Law</h3>
@@ -186,7 +187,7 @@
           </div>
         </article>
         
-        <!-- 5. COMPLIANCE MANAGEMENT — FULL DETAIL -->
+        <!-- 5. COMPLIANCE MANAGEMENT -->
         <article class="expertise-card">
           <div class="card-brass"></div>
           <h3 class="card-title">Compliance Management</h3>
@@ -203,7 +204,7 @@
           </div>
         </article>
         
-        <!-- 6. GOVERNANCE & REGULATORY ADVISORY — FULL DETAIL -->
+        <!-- 6. GOVERNANCE & REGULATORY ADVISORY -->
         <article class="expertise-card">
           <div class="card-brass"></div>
           <h3 class="card-title">Governance & Regulatory Advisory</h3>
@@ -219,7 +220,7 @@
           </div>
         </article>
         
-        <!-- 7. FORENSIC INVESTIGATIONS — FULL DETAIL -->
+        <!-- 7. FORENSIC INVESTIGATIONS -->
         <article class="expertise-card">
           <div class="card-brass"></div>
           <h3 class="card-title">Forensic Investigations</h3>
@@ -412,7 +413,7 @@
     </div>
   </footer>
 
-  <!-- ===== SIMPLE JAVASCRIPT — CHAT ONLY ===== -->
+  <!-- ===== JAVASCRIPT — SMOOTH SCROLL, CHAT, MOBILE MENU CLOSE ===== -->
   <script>
     (function() {
       "use strict";
@@ -427,6 +428,8 @@
           const targetEl = document.querySelector(targetId);
           if (targetEl) {
             targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Update active class
             navLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
             
@@ -497,4 +500,4 @@
     })();
   </script>
 </body>
-</html></html>
+</html></html></html>
